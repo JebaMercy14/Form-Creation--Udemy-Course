@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: #f2f6ff;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        h1 {
+            font-size: 32px;
+            padding-top: 56px;
+            padding-bottom: 32px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #f2f6ff;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ccc;
+        }
+
+        span.required {
+            color: red;
+        }
+
+        .social-icons {
+            width: 50px;
+            height: 50px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        .input-fields-container {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        .input-box {
+            font-size: 18px;
+            padding-bottom: 12px;
+            margin-bottom: 36px;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .submit-button {
+            background-color: #0056ff;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 24px;
+            padding-right: 24px;
+            font-size: 18px;
+            color: white;
+            border: none;
+        }
+
+        .submit-button:hover {
+            background-color: #003be5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div class="input-fields-container">
+        <div class="social-icons">
+          <div class="social-icons">
+            <a href="https://www.google.com/" target="_blank"><img src="http://pluspng.com/img-png/google-logo-png-open-2000.png" alt="Google Logo"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-thecircle-set/48/facebook_circle-512.png" alt="Facebook Logo"></a>
+            <a href="https://github.com/" target="_blank"><img src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="GitHub Logo"></a>
+            <a href="https://www.linkedin.com/" target="_blank"><img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-thecircle-set/48/linkedin_circle-512.png" alt="LinkedIn Logo"></a>
+        </div>
+        </div>
+        <form action="/register" method="post">
+            <label for="firstName">First Name<span class="required">*</span>:</label>
+            <input type="text" id="firstName" name="firstName" class="input-box" required>
+            <label for="lastName">Last Name<span class="required">*</span>:</label>
+            <input type="text" id="lastName" name="lastName" class="input-box" required>
+            <label for="email">Email<span class="required">*</span>:</label>
+            <input type="email" id="email" name="email" class="input-box" required>
+            <label for="password">Password<span class="required">*</span>:</label>
+            <input type="password" id="password" name="password" class="input-box" minlength="8" required>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" class="input-box">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="1" max="150">
+          <label for="country">Country:</label>
+          <input type="text" id="country" name="country">
+          <input type="submit" value="Submit">
+      </form>
+  </body>
+  </html>
+
+
